@@ -1,14 +1,5 @@
-import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import DetailScreen from './Detail/DetailScreen';
+import FavoriteScreen from './Favorite/FavoriteScreen';
+import HomeScreen from './Home/HomeScreen';
 
-const index = () => {
-  return (
-    <View>
-      <Text>index</Text>
-    </View>
-  );
-};
-
-export default index;
-
-const styles = StyleSheet.create({});
+export {HomeScreen, DetailScreen, FavoriteScreen};
