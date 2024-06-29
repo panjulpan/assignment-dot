@@ -7,16 +7,18 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import Colors from '../../styles/Color';
 import {Icon} from '../../../assets/Icon';
 import Dimension from '../../styles/Dimensions';
 import scaleFont from '../../styles/FontScaler';
 import data from '../../dummy/dummyPokemon';
 import GridComponent from '../../components/GridComponent';
+import {SavedContext} from '../../context/SavedContext';
 
 const FavoriteScreen = ({navigation}) => {
-  const [pokeData, setPokeData] = useState(data);
+  const {favorite} = useContext(SavedContext);
+  const [pokeData, setPokeData] = useState(favorite);
   const [searchText, setSearchText] = useState('');
 
   const handleSearch = text => {
